@@ -1,6 +1,6 @@
 # Paul-Wegner
 
-This Repository was created to showcase Projects for my Employment Search in Spring 2026.
+> This Repository was created to showcase Projects for my Employment Search in Spring 2026.
 
 This is by no means a demonstration of my absolute best, but rather a working practical compliation to
 showcase my capabilities with various technologies.  Especially those that I have employed while undertaking
