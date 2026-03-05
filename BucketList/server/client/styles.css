@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(assets/lake.jpg) no-repeat fixed center;
+    background-size: cover;
+    font-family: "Odibee Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#container {
+    width: 400px;
+    margin: 10vh auto;
+    border: 2px solid black;
+    /* x-y-blur-color */
+    box-shadow: 3px 3px 10px black;
+    background-color: ghostwhite;
+}
+
+#container h1 {
+    background-color: #9999FF;
+    /* top/bottom - left/right */
+    padding: 10px 20px;
+    /* text-transform: uppercase; */
+    /* x-y-blur-color */
+    text-shadow: 2px 2px 1px whitesmoke, 0 0 2px black;
+    text-align: center;
+    font-family: "Iceberg", sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+#container li {
+    line-height: 40px;
+    padding-left: 10px;
+    list-style: none;
+    color: #4444BB;
+    font-size: 18px;
+}
+
+#container li:nth-child(2n) {
+    background-color: gainsboro;
+}
+
+#container li span {
+    background-color: goldenrod;
+    color: black;
+    height: 40px;
+    padding: 3px 15px;
+    float: right;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+#container li:hover span {
+    opacity: 1;
+}
+
+input {
+    width: 100%;
+    line-height: 40px;
+    padding-left: 10px;
+    background-color: whitesmoke;
+    font-family: inherit;
+}
+
+input:focus {
+    border: 2px solid black;
+    color: coral;
+    outline: none;
+}
+
+#container .completed {
+    color: darkred;
+    text-decoration: line-through;
+}
+
+#container .inputContainer {
+    display: flex;
+    /* gap: 10px; */
+}
+
+#container button {
+    width: 20%;
+    font-family: inherit;
+}
