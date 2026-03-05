@@ -11,7 +11,7 @@ This was meant to serve as a basic and functional example of proficiency with va
 
 ---
 
-# 1] BucketList Application
+## 1. BucketList Application
 
 > This is a simple application which maintains a BucketList.  You can add items to your BucketList as well as
 delete the items, and even mark through items once you have completed them.  It runs using jQuery on the Front End and
