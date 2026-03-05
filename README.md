@@ -13,3 +13,9 @@ This was meant to serve as a basic and functional example of proficiency with va
 
 # BucketList Application
 
+> This is a simple application which maintains a BucketList.  You can add items to your BucketList as well as
+delete the items, and even mark through items once you have completed them.  It runs using jQuery on the Front End and
+an Express Server on the Back End.  The Back End is Connected to PostGres SQL, which allows the BucketList Items to be
+Retrieved from a Database.
+
+
