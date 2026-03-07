@@ -1,15 +1,16 @@
+/*************************************************************
+ * JavaScript Script using jQuery for Front-End Functionality
+************************************************************** */
+
 $(document).ready(() => {
 
-    //api address
-    let baseUrl = 'http://localhost:3000/api/items'
 
-    //user id
-    let userid = 3
-
-    //empty out the list
+    //Clear and Populate the UL Initially from a GET Request.
     $('#container ul').empty()
 
-    //Populate the UL from a GET Request
+    let baseUrl = 'http://localhost:3000/api/items'
+    let userid = 3
+
     fetch(`${baseUrl}?userid=${userid}`, { method: 'GET' })
     .then((response) => {
         return response.json()
@@ -27,7 +28,7 @@ $(document).ready(() => {
         console.error(error)
     })
 
-    //Checks Off Completed Items
+    //Checks Off Completed Items when you Click on Them
     $('#container ul').on('click', 'li', function () {
         let id = $(this).data('id')
         fetch(`${baseUrl}?user_id=${userid}&item_id=${id}`, {method: 'PUT'})
@@ -42,7 +43,7 @@ $(document).ready(() => {
         })
     })
 
-    //Removes Item from List
+    //Removes Item from List when you click on Trash Icon
     $('#container ul').on('click', 'span', function (event) {
         event.stopPropagation();
         let id = $(this).parent().data('id')
@@ -68,7 +69,7 @@ $(document).ready(() => {
     })
     */
 
-    //Add a New Item Using Button
+    //Add a New BucketList Item Using Button
     $('#container button').on('click', function (event) {
         if ($('#container input').val().trim()) {
             fetch(`${baseUrl}`, { 
