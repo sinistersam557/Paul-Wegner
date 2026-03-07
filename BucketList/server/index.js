@@ -1,10 +1,16 @@
+/* *****************************************************
+    * Basic Express Server for BucketList App
+******************************************************* */
+
 const express = require('express')
 const PORT = process.env.PORT || 3000;
 
+//Database Connection
 const pgClient = require('./connections/pgClient')
 
 const app = express();
 
+//Allows us to parse JSON and URL Encoded data in the body of requests
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
@@ -15,7 +21,7 @@ app.get("/", (req, res) => {
     res.send("Server is Running")
 })
 
-//GET method
+//GET method for Retrieving Bucketlist Items for a User
 app.get("/api/items", (req, res) => {
     const id = parseInt(req.query.userid)
     if (typeof id !== 'number') {
@@ -41,7 +47,7 @@ app.get("/api/items/:id", (req, res) => {
     const { id } = req.params
 }) */
 
-//POST method
+//POST method for Creating a New Bucketlist Item
 app.post("/api/items", (req, res) => {
     console.log(req.body)
     const { user_id, description } = req.body
@@ -64,7 +70,7 @@ app.post("/api/items", (req, res) => {
     }
 })
 
-//PUT method
+//PUT method for Updating a Bucketlist Item as Completed or Not Completed
 app.put("/api/items", (req, res) => {
     const user_id = parseInt(req.query.user_id)
     const item_id = parseInt(req.query.item_id)
@@ -87,7 +93,7 @@ app.put("/api/items", (req, res) => {
     }
 })
 
-//DELETE method
+//DELETE method for Removing a Bucketlist Item
 app.delete("/api/items", (req, res) => {
     const user_id = parseInt(req.query.user_id)
     const item_id = parseInt(req.query.item_id)
