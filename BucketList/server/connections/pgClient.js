@@ -1,6 +1,7 @@
 require('dotenv').config({});
 const { Client } = require('pg')
 
+//Destructure Environment Variables for DB Connection
 const { DB_HOST, DATABASE, DB_USER, DB_PASS, DB_PORT } = process.env
 
 // Client Object
