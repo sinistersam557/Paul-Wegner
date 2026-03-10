@@ -57,6 +57,7 @@ function App() {
     if (isSearch) endpoint=`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&limit=25&q=${lastSearch}&offset=${offset}`
     else endpoint=`https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=25&offset=${offset}`
     console.log(endpoint)
+    console.log("Offset: ", offset)
     //We fetch the data and update the gifs state variable
     fetch(endpoint)
     .then(response => response.json())
