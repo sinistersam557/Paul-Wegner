@@ -18,19 +18,6 @@ delete the items, and even mark through items once you have completed them.  It 
 an Express Server on the Back End.  The Back End is connected to PostGres SQL, which allows the BucketList items to be
 retrieved from a Database.
 
-#### A Quick Overview / Walkthrough
-
-- Navigate to server folder, and then to the client folder.  Inside review the index.html for Basic Format of Page.  There is also a styles.css which contains styling of the Page.
-
-- Also inside the client folder is script.js.  This includes the Front End Functionality.  It is commented and self-explanatory.
-
-- Next leave the client folder and look directly under the server folder.  index.js contains the code for the Express Server, that is
-the BackEnd, it is commented and self-explanatory as well.
-
-- Under the connections folder you will see how the PostGres SQL is connected.  It uses a .env (which is hidden here b/c of gitignore)
-
-- There is a schema.sql this includes some commands for the admin or DBA to create the tables and schemas used by PostGres.
-
 ---
 
 ## 2. tmdbAPI Application
