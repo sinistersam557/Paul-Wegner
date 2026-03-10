@@ -1,4 +1,4 @@
-# Paul-Wegner
+# Paul-Wegner Repository Overview
 
 > This Repository was created to showcase Projects for my Employment Search in Spring 2026.
 
