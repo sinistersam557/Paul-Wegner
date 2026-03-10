@@ -23,7 +23,7 @@ retrieved from a Database.
 ## 2. tmdbAPI Application
 
 > This project utilizes a Movie API to allow users to search for movies from an extensive database.  It is a good example of 
-consuming an API.  There is also some skill involved in building the Front End with jQuery.
+consuming an API.
 
 ---
 
