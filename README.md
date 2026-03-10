@@ -54,7 +54,7 @@ The site is deployed at cliqueapp.site, but one word of caution!
 
 I just realized the MongoDB Atlas Cluster we are using for the Database has an IP Address List, so if it doesn't recognize you, you won't be able to see anything after logging into the website and creating a username with Clerk.  If you are really interested in seeing our class project, please contact me and I can add your IP address to the List in MongoDB as well as your clerk username.
 
-At any rate hopefully you should be able to see how it was a vast undertaking from inspecting the code.  Unfortunately I feel that it could be structured and commented better.  Because this project is larger I don't think it's likely for someone looking through this repository to go through every nook and cranny with a white glove inspection of each line of the code.  But well hey, you never know!?
+At any rate hopefully you should be able to see how it was a vast undertaking from inspecting the code.  Unfortunately I feel that it could be structured and commented better (and I will periodically look into improving this).  I'd suggest looking at the general structure of the project, especially the various pages in the 01_Pages folder in React's src folder.  In addition to these pages it's basically just the App.jsx as far as the Front End is concerned.  The backend is basically just the index.js with some additional folders and files (the connections to mongodb and multer/cloudinary for file uploads).
 
 ---
 
