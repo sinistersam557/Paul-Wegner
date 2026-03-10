@@ -33,7 +33,22 @@ the BackEnd, it is commented and self-explanatory as well.
 
 ---
 
-## 2. Movie API Application
+## 2. tmdbAPI Application
 
 > This project utilizes a Movie API to allow users to search for movies from an extensive database.  It is a good example of 
 consuming an API.  There is also some skill involved in building the Front End with jQuery.
+
+---
+
+## 3. Giphy API in React
+
+> This project consumes a Giphy API to search for and display gifs.  It allows users to search and browse forward and backwards through the results.  It is built in React.
+
+---
+
+## 4. Clique
+
+> This was our class project for the software bootcamp.  It is a React Application that allows users to create a profile and join chat rooms ('cliques') to chat with others.  There is a Front End in React and a Back End Express Server.  Chat works with Socket IO.  I worked extensively on all parts of the project.
+
+---
+

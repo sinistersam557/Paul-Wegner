@@ -1,0 +1,20 @@
+h1 {
+  text-align: center;
+}
+
+#searchBar span {
+  margin-right: 50px;
+}
+
+#searchBar input {
+  margin-right: 10px;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#container img {
+  margin: 10px;
+}
