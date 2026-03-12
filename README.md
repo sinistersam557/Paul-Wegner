@@ -15,7 +15,7 @@ This was meant to serve as a basic and functional example of proficiency with va
 
 > This is a simple application which maintains a BucketList.  You can add items to your BucketList as well as
 delete the items, and even mark through items once you have completed them.  It runs using jQuery on the Front End and
-an Express Server on the Back End.  The Back End is connected to PostGres SQL, which allows the BucketList items to be
+an Express Server on the Back End.  The Back End is connected to PostGreSQL, which allows the BucketList items to be
 retrieved from a Database.
 
 There is a server folder with an index.js which contains the backend.  Inside the server folder there is a subfolder called client,
@@ -24,6 +24,11 @@ client contains the html, css, and javascript/jQuery.
 The BackEnd index.js Express Server is commented
 
 The FrontEnd script.js containing the jQuery is commented
+
+If you clone this repository and are seeking to run this project, it will not work directly out of the box.  Primarily because
+the information for the PostGreSQL is in an .env file.  You'll have to create your own .env file or directly type your connection
+information into pgClient.js under the server and then connections folder.  You'll also need your own PostGreSQL database, if you have
+one you can use the information in the schema.sql at the top level to create a new schema and the necessary tables.  You can run the application and then delete the schema and tables.
 
 ---
 
