@@ -1,0 +1,9 @@
+<div class="movie-container">
+  <h2>{{ movie.original_title }}</h2>
+  <p>Release Date: {{ movie.release_date }}</p>
+  <div class="container-contents">
+    <img [src]="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" [alt]="movie.original_title">
+    <p>{{ movie.overview }}</p>
+  </div>
+  <ng-content></ng-content>
+</div>

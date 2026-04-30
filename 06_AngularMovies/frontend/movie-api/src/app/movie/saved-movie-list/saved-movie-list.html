@@ -1,0 +1,6 @@
+<div class="container"></div>
+
+<app-movie-item 
+    *ngFor="let movie of savedMovies$ | async" 
+    [movie]="movie">
+</app-movie-item>

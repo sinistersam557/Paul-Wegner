@@ -1,0 +1,17 @@
+.movie-container {
+    border: 1px solid black;
+    padding: 16px;
+    margin: 16px 0px;
+}
+
+.container-contents {
+    display: flex;
+}
+
+.container-contents img {
+    height: 300px;
+    margin-top: 0px;
+}
+.container-contents p {
+    margin: 0px 16px;
+}

@@ -1,0 +1,15 @@
+<div class="container">
+    <input type="text" placeholder="Search for a Movie..." [(ngModel)]="searchTerm">
+    <button (click)="searchMovies(1)">Search</button>
+    <br />
+    <button (click)="previousPage()" [disabled]="currentPage === 1"><</button>
+    <span> {{ currentPage }} of {{ totalPages }} </span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">></button>
+</div>
+
+<app-movie-item 
+    *ngFor="let movie of displayMovies$ | async" 
+    [movie]="movie">
+    <button *ngIf="!movie.isSaved" (click)="saveMovie(movie)">Save to List</button>
+    <button *ngIf="movie.isSaved" (click)="removeMovie(movie)">Remove from List</button>  
+</app-movie-item>

@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>{{ review.title }} {{ review.release_date }}</h2>
+    <p><strong>Community Rating:</strong> {{ review.vote_average }} of 10</p>
+    <p><strong>Votes:</strong> {{ review.vote_count }}</p>
+    <div class="contentContainer">
+        <img [src]="`https://image.tmdb.org/t/p/original/${review.poster_path}`" alt="{{ review.title }}" class="poster" />
+        <div class="reviewContainer">
+            <p>Review by <em>{{ review.name }}</em></p>
+            <p>Rating: <span class="star-rating" [attr.data-rating]="review.rating"></span></p>
+            <br />
+            <div class="reviewSection">
+                <p><strong>Review:</strong></p>
+                <p style="white-space: pre-wrap;">{{ review.review }}</p>
+            </div>
+        </div>
+    </div>
+</div>

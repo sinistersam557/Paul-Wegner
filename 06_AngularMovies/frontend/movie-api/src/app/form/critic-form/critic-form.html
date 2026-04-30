@@ -1,0 +1,50 @@
+<p>You must add the movie to your saved movies first, in order to review it.</p>
+
+<form class="critic-form" [formGroup]="criticForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="colorLine"></div>
+    <div class="titleSection">
+      <h2>Review Your Movie</h2>
+    </div>
+
+    <div class="nameSection">
+      <label for="criticName">Critic Name</label>
+      <input id="criticName" type="text" placeholder="Your Name Here..." formControlName="name" />
+      <p *ngIf="criticForm.get('name')?.invalid && (criticForm.get('name')?.touched || isSubmitted)" class="error">Name is Required</p>
+      <label for="movieTitle">Movie Title</label>
+      <select id="movieTitle" formControlName="id">
+        <option *ngFor="let movie of savedMovies$ | async" [value]="movie.id">{{ movie.original_title }} {{
+          movie.release_date }}</option>
+      </select>
+      <p *ngIf="criticForm.get('id')?.invalid && (criticForm.get('id')?.touched || isSubmitted)" class="error">Movie Title is Required</p>
+    </div>
+
+    <div class="ratingSection">
+      <label>Rating</label>
+      <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5" formControlName="rating" /><label for="star5" title="5 stars">★</label>
+        <input type="radio" id="star4" name="rating" value="4" formControlName="rating" /><label for="star4" title="4 stars">★</label>
+        <input type="radio" id="star3" name="rating" value="3" formControlName="rating" /><label for="star3" title="3 stars">★</label>
+        <input type="radio" id="star2" name="rating" value="2" formControlName="rating" /><label for="star2" title="2 stars">★</label>
+        <input type="radio" id="star1" name="rating" value="1" formControlName="rating" /><label for="star1" title="1 star">★</label>
+      </div>
+      <p *ngIf="criticForm.get('rating')?.invalid && (criticForm.get('rating')?.touched || isSubmitted)" class="error">Rating is Required</p>
+    </div>
+
+    <div class="reviewSection">
+      <label for="reviewText">Review</label>
+      <textarea id="reviewText" formControlName="review"></textarea>
+      <p *ngIf="criticForm.get('review')?.invalid && (criticForm.get('review')?.touched || isSubmitted)" class="error">Review is Required</p>
+    </div>
+
+    <div class="buttonSection">
+      <button type="submit" class="button">Submit</button>
+        <p *ngIf="isSuccess" class="success">Review submitted successfully!</p>
+    </div>
+  </div>
+</form>
+
+<div class="outputSection">
+  <div>{{ criticForm.value | json }}</div>
+  <div>{{ criticForm.valid | json }}</div>
+</div>

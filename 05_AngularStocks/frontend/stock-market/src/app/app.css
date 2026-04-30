@@ -1,0 +1,7 @@
+.links, .links a {
+    margin-right: 10px;
+}
+
+.links a.active {
+    background-color: grey;
+}

@@ -1,0 +1,20 @@
+<div>
+    <input 
+        name="searchBox"
+        placeholder="Search Here"
+        [(ngModel)]="searchString"
+        (keyup)="search()" />
+</div>
+
+<h2>
+    We have found {{ (stocks$ | async)?.length }} stocks!
+</h2>
+
+<app-stock-item 
+    *ngFor="let stock of stocks$ | async" 
+    [stock]="stock">
+</app-stock-item>
+
+<div>
+    <button type="button" (click)="nextPage()">Next Page</button>
+</div>
