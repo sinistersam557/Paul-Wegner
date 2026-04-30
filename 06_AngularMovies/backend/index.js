@@ -9,6 +9,7 @@ app.use(require('cors')());
 app.use(express.json());
 
 let savedMovies = [];
+let reviewedMovies = [];
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Movie API Backend!');
@@ -31,6 +32,25 @@ app.delete('/api/saved-movies/:id', (req, res) => {
     const id = req.params.id;
     savedMovies = savedMovies.filter(movie => movie.id != id);
     res.status(204).json({ message: 'Movie deleted successfully!' });
+});
+
+// GET METHOD for Reviewed Movies
+app.get('/api/reviewed-movies', (req, res) => {
+    res.json(reviewedMovies);
+});
+
+// POST METHOD for Reviewed Movies
+app.post('/api/reviewed-movies', (req, res) => {
+    const review = req.body;
+    reviewedMovies.push(review);
+    res.status(201).json({ message: 'Review submitted successfully!', review });
+});
+
+// DELETE METHOD for Reviewed Movies
+app.delete('/api/reviewed-movies/:id', (req, res) => {
+    const id = req.params.id;
+    reviewedMovies = reviewedMovies.filter(review => review.id != id);
+    res.status(204).json({ message: 'Review deleted successfully!' });
 });
 
 app.listen(PORT, () => {
