@@ -1,0 +1,25 @@
+.container {
+    margin-top: 48px;
+}
+
+.movie-details-card {
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 0;
+}
+
+.movie-details-card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.movie-poster{
+    width: 150px;
+    height: auto;
+    float: left;
+}
+
+.overview {
+    margin-left: 170px;
+}

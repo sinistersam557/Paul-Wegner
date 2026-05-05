@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="actor-details-container">
+        <img [src]="'https://image.tmdb.org/t/p/w500' + (actorDetails$ | async)?.profile_path" [style.visibility]="(actorDetails$ | async)?.profile_path ? 'visible' : 'hidden'" alt="{{ (actorDetails$ | async)?.name }}" class="actor-image">
+        <h2>{{ (actorDetails$ | async)?.name }}</h2>
+        <p>Popularity: {{ (actorDetails$ | async)?.popularity }}</p>
+        <p class="bio">{{ (actorDetails$ | async)?.biography }}</p>
+    </div>
+    <h3>Movies:</h3>
+    <div class="movies-container">
+        <div class="movie-card" *ngFor="let movie of (actorMovies$ | async) | slice:0:10" [routerLink]="['/movies', movie.id]">
+            <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" [style.visibility]="movie.poster_path ? 'visible' : 'hidden'" alt="{{ movie.original_title }}" class="movie-poster">
+            <p>{{ movie.original_title }}</p>
+            <p>{{ movie.release_date }}</p>
+        </div>
+    </div>
+</div>
+

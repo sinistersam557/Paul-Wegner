@@ -1,0 +1,12 @@
+<div class="search-container">
+    <input type="text" placeholder="Search Actors..." [(ngModel)]="searchTerm">
+    <button (click)="searchActors(1)">Search</button>
+    <br />
+    <button (click)="previousPage()" [disabled]="currentPage === 1"><</button>
+    <span> {{ currentPage }} of {{ totalPages }} </span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">></button>
+</div>
+
+<div class="container">
+    <app-actor-item *ngFor="let actor of actors$ | async" [actor]="actor"></app-actor-item>    
+</div>

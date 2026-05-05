@@ -19,6 +19,14 @@ export class MovieService {
     return this.http.get<any[]>(`https://api.themoviedb.org/3/search/movie?query=${query}&page=${page}`, { headers });
   }
 
+  getMovieDetails(id: number): Observable<any> {
+    const headers = new HttpHeaders({
+      'accept': "application.json",
+      'Authorization': "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMWExMTA3MjIyNDU4MDEwM2RkNDY3YzM1ZWIxNGMyMiIsIm5iZiI6MTc1OTI2MzQzOS4xNiwic3ViIjoiNjhkYzNhY2YzMmZlMTQ3ZWU3ZTFkM2ZlIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.rzGdN9SE52hH-agnbxXXdgzY5hBQBTxyJCZ0spDwawA"
+    })
+    return this.http.get<any>(`https://api.themoviedb.org/3/movie/${id}`, { headers });
+  }
+
   getSavedMovies(): Observable<any[]> {
     return this.http.get<any[]>(`${this.expressAPI}/saved-movies`);
   }

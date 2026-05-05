@@ -1,0 +1,8 @@
+<div class="card" routerLink="/actors/{{ actor.id }}">
+    <div class="img-container">
+        <img [src]="'https://image.tmdb.org/t/p/w500' + actor.profile_path" [style.visibility]="actor.profile_path ? 'visible' : 'hidden'" class="card-img-top" alt="{{ actor.name }}">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ actor.name }}</h5>
+    </div>
+</div>

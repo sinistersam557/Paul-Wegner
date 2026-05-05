@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="movie-details-card">
+        <h2>{{ (movieDetails$ | async)?.original_title }}</h2>
+        <p><strong>Release Date:</strong> {{ (movieDetails$ | async)?.release_date }}</p>
+        <p><strong>Rating:</strong> {{ (movieDetails$ | async)?.vote_average }}</p>
+        <img [src]="'https://image.tmdb.org/t/p/w500' + (movieDetails$ | async)?.poster_path" [style.visibility]="(movieDetails$ | async)?.poster_path ? 'visible' : 'hidden'" alt="{{ (movieDetails$ | async)?.original_title }}" class="movie-poster">
+        <p class="overview"><strong>Overview:</strong> {{ (movieDetails$ | async)?.overview }}</p>
+    </div>
+</div>
